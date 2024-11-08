@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Thatonekid</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="IMG_1486.png" />
+<link rel="apple-touch-icon" sizes="192x192" href="IMG_1486.png"> 
+<link rel="manifest" href="manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  * {box-sizing: border-box}
+
+  /* Set height of body and the document to 100% */
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+  }
+
+  /* Style tab links */
+  .tablink {
+    background-color: #000;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+  }
+
+  .tablink:hover {
+    background-color: #777;
+  }
+
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    display: none;
+    padding: 40px 0px;
+    height: 100%;
+  }
+  .achtopnav a {
+    float: left;
+    display: block;
+    color: red;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  #Home {background-color: black;}
+  #News {background-color: black;}
+  #Contact {background-color: black;}
+  #About {background-color: black;}
+</style>
+</head>
+<body>
+
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a class="active" href="games.html">Games</a>
+    <a href="proxy.html">Proxys</a>
+    <a href="other.html">Other</a>
+    <a class="achtopnav" href="achivements.html">Achivements</a>
+    <div id="ha" class="search-container">
+      <input id="searchbar" onkeyup="search_animal()" type="text" name="search" placeholder="Search Games">
+      <button type="submit" ><i class="fa fa-search"></i></button>
+    </div>
+  </div>
+    <button class="tablink" onclick="openPage('All', this, 'blue')" id="defaultOpen">All</button>
+    <button class="tablink" onclick="openPage('Tycoon', this, 'blue')">Tycoon</button>
+    <button class="tablink" onclick="openPage('Idle', this, 'blue')">Idle</button>
+    <button class="tablink" onclick="openPage('2P', this, 'blue')">2P</button>
+    <button class="tablink" onclick="openPage('Sports', this, 'blue')">Sports</button>
+    <button class="tablink" onclick="openPage('Classic', this, 'blue')">Classic</button>
+    <button class="tablink" onclick="openPage('Franchise', this, 'blue')">Franchise</button>
+    <button class="tablink" onclick="openPage('Puzzle', this, 'blue')">Puzzle</button>
+    <div id="All" class="tabcontent">
+      <ul id='list'>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals" data-searchable="false"><a style="color: red; font-size: 50px;" href="achivements.html">ACHIVEMENTS (rewards included!)</a></li>
+        <li class="animals" data-searchable="false"><a style="color: blue" href="proxy.html">PROXIES WORK!!! CLICK HERE TO GO TO PROXIES PAGE!</a></li>
+        <li class="animals" data-searchable="false"><a style="color: blue;" href="wipgames.html">Work In Progress Stuff</a></li>
+        <li class="animals" data-searchable="false"><a style="color: lime;">Green = Gamehub</a></li>
+        <li class="animals" data-searchable="false"><a style="color: red;">Red = Broken Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: blue;">Blue = Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/cluster-rush.html">Cluster Rush</a></li> 
+        <li class="animals"><a style="color: blue;" href="/html5games/retro-bowl.html">Retro Bowl</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/retro-c.html">Retro Bowl College</a></li> 
+        <li class="animals"><a style="color: blue;" href="/html5games/blungi-slime.html">Blumgi Slime</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/drive-mad.html">Drive Mad</a></li> 
+        <li class="animals"><a style="color: blue;" href="/html5games/monster.html">Monster Tracks</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/bitlife.html">Bitlife</a></li>  
+        <li class="animals"><a style="color: blue;" href="/html5games/wbwwb.html">We Become What We Behold (WBWWB)</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/cubes2048.html">Cubes 2048</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/basketrandom.html">Basket Random</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/basket-stars.html">Basketball Stars</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/basket-legend-2020.html">Basketball Legends 2020</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/getaway.html">Getaway Shootout</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/projectsand.html">Project Sand</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/breakout.html">Idle Breakout</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/rocket.html">Blumgi Rocket</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/happywheels.html">Happy Wheels</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/territorial-hidden.html">Territorial</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/blockblast.html">Block Blast!</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/sandboxels.html">Sandboxels</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/squirdle.html">Squirdle</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/csgoclicker.html">CSGO Clicker</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/cubefield.html">Cubefield</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/yohoho.html">YoHoHo.io</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/airpod.html">Gimme Da Airpod</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/assassin.html">Tactical Assassin</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/finalearth.html">The Final Earth</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/tankdefend.html">Defend The Tank</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/pandemic.html">Pandemic II</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/gondor.html">Battle For Gondor</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/finalearth2.html">The Final Earth 2 (Spam "Close")</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/fishing.html">Tiny Fishing</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/shark.html">Idle Shark</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/ckc.html">Creative Kill Chamber</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/recoil.html">Recoil</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/run3.html">Run 3</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/aswc.html">A Small World Cup</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/footballgm.html">Football GM</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/sortthecourt.html">Sort the Court!</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/sm64.html">Cursed Super Mario 64</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/swerve.html">Swerve</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/monkeymart.html">Monkey Mart</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/polytrack.html">Poly Track (Only saves if you keep app/browser open)</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/slowroads.html">Slow Roads</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/at2.html">Awesome Tanks 2</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/wolfenstein.html">Wolfenstein 3D</a></li>
+        <li class="animals"><a style="color: red;" href="/html5games/superstarcar.html">Super Star Car</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/tosstheturtle.html">Toss The Turtle</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/pf2.html">Parking Fury 2 (DOES NOT SAVE)</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/hoh.html">House Of Hazards</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/ngon.html">N-Gon</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/icraft.html">Infinite Craft</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/carsurvival.html">Car Survival</a></li>
+        <!--gamehub start-->
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/1.html">1</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/2048.html">2048</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/adofai.html">A Dance Of Fire And Ice</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/adr.html">A Dark Room</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/ac">Adrenaline Challenge</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/asteroids.html">Asteroids</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/astray.html">Astray</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/backcountry.html">Backcountry</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/badicecream.html">Bad Ice Cream</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/badicecream2.html">Bad Ice Cream 2</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/badicecream3.html">Bad Ice Cream 3</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/bounceback.html">Bounceback</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/breaklock.html">Breaklock</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/breakout.html">Breakout</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/chess.html">Chess</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/chrome-dino.html">Chrome Dino</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/connect3.html">Connect 3</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/cookie.html">Cookie Clicker</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/doodlejump.html">Doodle Jump</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/ducklife.html">Ducklife</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/ducklife2.html">Ducklife 2</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/ducklife3.html">Ducklife 3</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/ducklife4.html">Ducklife 4</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/edgesurf.html">Edge Surf</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/fbf.html">Factory Balls Forever</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/fbawg.html">Fire Boy and Water Girl in the Forest Temple</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/flappybird.html">Flappy Bird</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/geometry-dash.html">Geometry Dash</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/hextris.html">Hextris</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/minecraft.html">Minecraft 0.30</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/moto3xm2.html">Moto X3M 2</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/ovo.html">OvO</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/pacman.html">Pacman</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/pushback.html">Pushback</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/racer.html">Racer</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/retro-haunt.html">Rterohaunt</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/riddle.html">Riddle School</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/riddle2.html">Riddle School 2</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/riddle3.html">Riddle School 3</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/riddle4.html">Riddle School 4</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/riddle5.html">Riddle School 5</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/road-blocks.html">Roadblocks</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/sleeping.html">Sleeping Beauty</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/slope.html">Slope</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/snake.html">Snake</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/snow.html">Snow Rider 3D</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/spacecomp.html">Space Company</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/spaceinvade.html">Space Invaders</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/tetris.html">Tetris</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/chroma.html">The Chroma Incident</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/nogame.html">THERE IS NO GAME!</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/tunnel.html">Tunnel Rush</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/underrun.html">Under Run</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/vex3.html">Vex 3</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/vex4.html">Vex 4</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/vex5.html">Vex 5</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/vex6.html">Vex 6</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/vex7.html">Vex 7</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/volley.html">Volley Random</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/whg.html">World's Hardest Game</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/whg2.html">World's Hardest Game 2</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/exe.html">xx142-b2.exe</a></li>
+        <!--gamehub end-->
+      </ul>
+    </div>
+    <div id="Tycoon" class="tabcontent">
+      <ul id='list'>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals" data-searchable="false"><a style="color: lime;">Green = Gamehub</a></li>
+        <li class="animals" data-searchable="false"><a style="color: red;">Red = Broken Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: blue;">Blue = Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/fishing.html">Tiny Fishing</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/monkeymart.html">Monkey Mart</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/spacecomp.html">Space Company</a></li>
+      </ul>
+    </div>
+    <div id="Idle" class="tabcontent">
+      <ul id='list'>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals" data-searchable="false"><a style="color: lime;">Green = Gamehub</a></li>
+        <li class="animals" data-searchable="false"><a style="color: red;">Red = Broken Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: blue;">Blue = Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/breakout.html">Idle Breakout</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/fishing.html">Tiny Fishing</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/shark.html">Idle Shark</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/monkeymart.html">Monkey Mart</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/cookie.html">Cookie Clicker</a></li>
+      </ul>
+    </div>
+    <div id="2P" class="tabcontent">
+      <ul id='list'>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals" data-searchable="false"><a style="color: lime;">Green = Gamehub</a></li>
+        <li class="animals" data-searchable="false"><a style="color: red;">Red = Broken Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: blue;">Blue = Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/basketrandom.html">Basket Random</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/blungi-slime.html">Blumgi Slime</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/airpod.html">Gimme Da Airpod</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/chess.html">Chess</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/connect3.html">Connect 3</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/fbawg.html">Fire Boy and Water Girl in the Forest Temple</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/volley.html">Volley Random</a></li>
+      </ul>
+    </div>
+    <div id="Sports" class="tabcontent">
+      <ul id='list'>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals" data-searchable="false"><a style="color: lime;">Green = Gamehub</a></li>
+        <li class="animals" data-searchable="false"><a style="color: red;">Red = Broken Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: blue;">Blue = Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/retro-bowl.html">Retro Bowl</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/retro-c.html">Retro Bowl College</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/basketrandom.html">Basket Random</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/basket-stars.html">Basketball Stars</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/basket-legend-2020.html">Basketball Legends 2020</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/aswc.html">A Small World Cup</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/footballgm.html">Football GM</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/sortthecourt.html">Sort the Court!</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/bigshotboxing.html">Big Shot Boxing</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/volley.html">Volley Random</a></li>
+      </ul>
+    </div>
+    <div id="Classic" class="tabcontent">
+      <ul id='list'>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals" data-searchable="false"><a style="color: lime;">Green = Gamehub</a></li>
+        <li class="animals" data-searchable="false"><a style="color: red;">Red = Broken Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: blue;">Blue = Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+      </ul>
+    </div>
+    <div id="Franchise" class="tabcontent">
+      <ul id='list'>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals" data-searchable="false"><a style="color: lime;">Green = Gamehub</a></li>
+        <li class="animals" data-searchable="false"><a style="color: red;">Red = Broken Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: blue;">Blue = Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/run3.html">Run 3</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/badicecream.html">Bad Ice Cream</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/badicecream2.html">Bad Ice Cream 2</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/badicecream3.html">Bad Ice Cream 3</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/ducklife.html">Ducklife</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/ducklife2.html">Ducklife 2</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/ducklife3.html">Ducklife 3</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/ducklife4.html">Ducklife 4</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/riddle.html">Riddle School</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/riddle2.html">Riddle School 2</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/riddle3.html">Riddle School 3</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/riddle4.html">Riddle School 4</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/riddle5.html">Riddle School 5</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/vex3.html">Vex 3</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/vex4.html">Vex 4</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/vex5.html">Vex 5</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/vex6.html">Vex 6</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/vex7.html">Vex 7</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/whg.html">World's Hardest Game</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/whg2.html">World's Hardest Game 2</a></li>
+      </ul>
+    </div>
+    <div id="Puzzle" class="tabcontent">
+      <ul id='list'>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals" data-searchable="false"><a style="color: lime;">Green = Gamehub</a></li>
+        <li class="animals" data-searchable="false"><a style="color: red;">Red = Broken Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: blue;">Blue = Repository</a></li>
+        <li class="animals" data-searchable="false"><a style="color: black;"></a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/blockblast.html">Block Blast!</a></li>
+        <li class="animals"><a style="color: blue;" href="/html5games/squirdle.html">Squirdle</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/1.html">1</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/2048.html">2048</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/adr.html">A Dark Room</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/astray.html">Astray</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/bounceback.html">Bounceback</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/breaklock.html">Breaklock</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/breakout.html">Breakout</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/fbf.html">Factory Balls Forever</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/fbawg.html">Fire Boy and Water Girl in the Forest Temple</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/road-blocks.html">Roadblocks</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/tetris.html">Tetris</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/chroma.html">The Chroma Incident</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/nogame.html">THERE IS NO GAME!</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/whg.html">World's Hardest Game</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/whg2.html">World's Hardest Game 2</a></li>
+        <li class="animals"><a style="color: lime;" href="/html5games/gamehub/exe.html">xx142-b2.exe</a></li>
+      </ul>
+    </div>
+  <script>
+    document.getElementById("defaultOpen").click();
+
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+    // Function to search games
+    function search_animal() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('searchbar');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("list");
+        li = ul.getElementsByTagName('li');
+    
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+
+          // Check if the item is searchable
+          if (li[i].getAttribute('data-searchable') !== 'false') {
+            // If the search filter matches, display the item
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              // Otherwise, hide the item
+              li[i].style.display = "none";
+            }
+          }
+        }
+      }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+</body>
+</html>
